@@ -131,5 +131,16 @@ namespace ChessConsoleGame
             // Ex: if (piece is Knight) return piece.Color == Color.White ? 'N' : 'n';
             //     else if (piece is Pawn) return piece.Color == Color.White ? 'P' : 'p'; ... etc.
         }
+        public void SetupInitialPieces()
+        {
+            // Exemplo de configuração inicial (apenas para teste)
+            //PlacePiece(new DummyPiece(Color.White, this), new Position(6, 4));
+            //PlacePiece(new DummyPiece(Color.Black, this), new Position(1, 3));
+            for (int i = 0; i < Columns; i++) { 
+                PlacePiece(new Pawn(Color.White, this), new Position(6, i));
+                PlacePiece(new Pawn(Color.Black, this), new Position(1, i));
+            }
+
+        }
     }
 }

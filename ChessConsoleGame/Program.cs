@@ -7,8 +7,11 @@ Console.WriteLine("Starting Chess Console Game!");
 // 1. Criar uma instância do Tabuleiro
 Board chessBoard = new Board(); // Isso chama o construtor do Board, que inicializa a matriz 8x8
 
-// 2. Chamar o método PrintBoard() NO OBJETO tabuleiro que você criou
-Console.WriteLine("Initial empty board:");
+// 2. (Opcional) Colocar peças iniciais no tabuleiro
+chessBoard.SetupInitialPieces(); // Chama o método para colocar as peças iniciais (se implementado)
+
+// 3.. Chamar o método PrintBoard() NO OBJETO tabuleiro que você criou
+Console.WriteLine("Initial board:");
 chessBoard.PrintBoard(); // Chama o método que está DENTRO da classe Board
 
 // --- Opcional: Colocar uma peça manualmente para teste (antes de termos as classes reais) ---
